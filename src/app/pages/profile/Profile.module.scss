@@ -1,0 +1,122 @@
+.user-profile {
+    padding-left: 50px;
+}
+
+.name {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 15px 0px;
+    color: #222222;
+    font-family: "Roboto", sans-serif;
+    font-weight: calc(var(--font-weigth) + 150);
+}
+
+.role {
+    font-size: 1.2rem;
+    font-weight: var(--font-weigth);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #222222;
+}
+
+.text {
+    font-size: 1rem;
+    font-weight: calc(var(--font-weigth) - 100);
+}
+
+.pr-list {
+    margin: 30px 0px;
+    font-weight: calc(var(--font-weigth) - 100);
+}
+
+.pr-list ul li {
+    margin-bottom: 8px;
+}
+
+.pr-list ul li i {
+    width: 18px;
+}
+
+.social-icons-head ul {
+    display: flex;
+    list-style-type: none
+}
+
+.social-icons-head ul li a {
+    padding: 5px 15px;
+    font-size: 1rem;
+    transition: all .3s;
+    display: inline-flex;
+}
+
+
+.social-icons-head ul li:nth-child(1) a {
+    padding-left: 0;
+}
+
+.social-icons-head ul li a:hover {
+    color: #000;
+    transform: scale(1.2) translateY(-5px);
+}
+
+.sec-title {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+
+.pg-title {
+    font-weight: var(--font-weigth);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    color: #000;
+}
+
+.pg-sub-title {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #999999;
+    font-weight: var(--font-weigth);
+    letter-spacing: 5px;
+}
+
+.user-img {
+    height: 500px;
+    padding-bottom: 5px;
+}
+
+.user-img img {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.page-content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+@media (max-width: 550px) {
+    .user-img {
+        height: 150px;
+        padding-bottom: 5px;
+    }
+
+    .user-img img {
+        height: 100%;
+    }
+
+    .user-profile {
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 870px) {
+    .page-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
