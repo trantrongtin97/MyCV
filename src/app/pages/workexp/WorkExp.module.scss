@@ -1,0 +1,66 @@
+.detail {
+    flex: 1 0 0;
+    background-color: white;
+    padding: 2rem;
+}
+
+.detail:hover>.detail-section:not(:hover) {
+    opacity: 0.3;
+}
+
+.detail-section {
+    transition: all 0.3s;
+}
+
+.detail-section:not(:last-of-type) {
+    padding-bottom: 1rem;
+}
+
+.detail-title {
+    display: flex;
+    align-items: center;
+}
+
+.detail-section>.detail-content {
+    padding: 2rem; 
+    user-select: none;
+}
+
+.detail-section.edu>.detail-content {
+    padding-left: calc(1.5rem + 10px);
+}
+
+.title-icon-span {
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    font-weight: calc(var(--font-weigth) + 100);
+}
+
+.title-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-right: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.title-icon-content {
+    color: white;
+    line-height: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.detail-section:hover .title-icon {
+    transform: scale(1.5);
+    margin-right: 1.5rem;
+}
+
+.detail-section:hover .title-icon-span {
+    letter-spacing: 1.5px;
+}

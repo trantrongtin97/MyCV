@@ -4,18 +4,15 @@ import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faList } from '@fortawesome/free-solid-svg-icons';
 
+import Title from '../../components/Title';
+
 const cx = classNames.bind(styles);
 
 const ProfessionalSummary = () => {
     return (
         <Fragment>
             <div className={cx('sec-title')}>
-                <div className={cx('pg-title')}>
-                    <div className={cx('title-icon')}>
-                        <FontAwesomeIcon className={cx('title-icon-content')} icon={faList} />
-                    </div> 
-                    <span className={cx('title-icon-span')}>Professional Summary</span>
-                </div>
+                <Title name="Professional Summary" icon={<FontAwesomeIcon icon={faList} />}/>
             </div>
             <div className={cx('page-content')}>
                 <div className={cx('flex-1')}>

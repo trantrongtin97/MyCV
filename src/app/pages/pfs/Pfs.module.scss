@@ -20,6 +20,10 @@
     border-radius: 0.25rem;
     overflow: hidden;
     background-color: white;
+    font-weight: calc(var(--font-weigth) - 100);
+    &:hover {
+        font-weight: var(--font-weigth);
+    }
 }
 
 .pfs-ol li::before {

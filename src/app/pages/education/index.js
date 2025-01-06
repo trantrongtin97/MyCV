@@ -3,6 +3,8 @@ import styles from './Education.module.scss';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserGraduate } from "@fortawesome/free-solid-svg-icons";
+import Title from "../../components/Title";
+import TimeLine from "../../components/TimeLine";
 
 const cx = classNames.bind(styles);
 
@@ -10,35 +12,20 @@ const Education = () => {
     return (
         <Fragment>
             <div className={cx('edu-content')}>
-                <div className={cx('detail')}>
-                    <div className={cx('detail-section edu')}>
-                        <div className={cx('detail-title')}>
-                            <div className={cx('title-icon')}>
-                                <FontAwesomeIcon className={cx('title-icon-content')} icon={faUserGraduate} />
-                            </div>
-                            <span className={cx('title-icon-span')}>Education</span>
-                        </div>
-                        <div className={cx('detail-content')}>
-                            <div className={cx('timeline-block')}>
-                                <h1>APTECH</h1>
-                                <p>Ho Chi Minh City, Viet Nam</p>
-                                <time>2018 - 2021</time>
-                            </div>
-                        </div>
+                <Title name="Education" icon={<FontAwesomeIcon icon={faUserGraduate} />} />
+                <div className={cx('line1')}>
+                    <TimeLine />
+                    <div className={cx('circle-block')}>
+                        <svg>
+                            <circle cx="50" cy="50" r="45"></circle>
+                            <circle className={cx('cbar')} cx="50" cy="50" r="45" style={{ "--percent": "0.86" }}>
+                            </circle>
+                            
+                        </svg>
+                        <span className={cx('tl-name')}>GPA</span>
+                        <span className={cx('tl-exp')}>8.6</span>
                     </div>
-                </div>
-                <div className={cx('div-tool-list')}>
-                    <ul className={cx('tool-list')}>
-                        <li>
-                            <svg viewbox="0 0 100 100">
-                                <circle cx="50" cy="50" r="45"></circle>
-                                <circle className={cx('cbar')} cx="50" cy="50" r="45" style={{ "--percent": "0.8" }}>
-                                </circle>
-                            </svg>
-                            <span className={cx('tl-name')}>GPA</span>
-                            <span className={cx('tl-exp')}>8.6</span>
-                        </li>
-                    </ul>
+
                 </div>
             </div>
             <div>
@@ -54,6 +41,7 @@ const Education = () => {
                 </ul>
             </div>
         </Fragment>
+
     );
 }
 

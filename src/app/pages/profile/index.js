@@ -14,7 +14,7 @@ const Profile = () => {
         <Fragment>
             <div className={cx('sec-title')}>
                 <div className={cx('pg-title')}>
-                    <FontAwesomeIcon className={cx('m-right20')} icon={faCircleUser} />
+                    <FontAwesomeIcon icon={faCircleUser} />
                     My Profile</div>
             </div>
             <div className={cx('page-content')}>

@@ -1,0 +1,51 @@
+$icon-size : 1.5rem;
+
+.detail {
+    flex: 1 0 0;
+    background-color: white;
+    padding: 2rem;
+}
+
+.detail-section {
+    transition: all 0.3s;
+    &:hover{
+        .title-icon  {
+            transform: scale(1.5);
+            margin-right: 1.5rem;
+        }
+        .title-icon-span {
+            letter-spacing: 3px;
+        }
+    }
+}
+
+.detail-title {
+    display: flex;
+    align-items: center;
+}
+
+.title-icon-span {
+    font-size: $icon-size;
+    transition: all 0.3s;
+    font-weight: calc(var(--font-weigth) + 100);
+}
+
+.title-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-right: 1rem;
+    width: $icon-size;
+    height: $icon-size;
+    background-color: var(--primary);
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.title-icon-content {
+    color: white;
+    line-height: $icon-size - 0.5;
+    font-size: $icon-size - 0.5;
+    text-align: center;
+}
