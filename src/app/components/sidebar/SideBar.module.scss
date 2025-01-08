@@ -126,10 +126,16 @@
         height: 100%;
     }
     .nav{
-        text-align: start;
+        display: flex;
+        justify-content: flex-start;
     }
     .nav ul{
-        padding: 0;
+        padding-left: 0px;
+        margin: 0;
+    }
+    .nav ul li,
+    .nav ul li a {
+        text-align: left;
     }
 }
 
@@ -146,13 +152,13 @@
     .nav {
         display: flex;
         justify-content: space-around;
-        margin: 1px;
+        margin: 0px 1px;
     }
 
     .nav ul li,
     .nav ul li a {
-        display: inline-flex;
         padding: 2px;
+        justify-content: flex-start;
     }
 
     .left-footer {

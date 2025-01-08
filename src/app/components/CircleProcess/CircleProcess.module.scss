@@ -1,0 +1,38 @@
+.circle-block{
+    display: flex;
+}
+
+.circle-block>svg {
+    fill: transparent;
+}
+
+.circle-block>svg>circle {
+    position: absolute;
+    stroke-width: 1px;
+    stroke: #cdcdcd;
+}
+
+.circle-block>svg>circle.cbar {
+    stroke-width: 4px;
+    stroke: var(--primary);
+    stroke-linecap: round;
+    stroke-dashoffset: calc(var(--MATH-PI) * 45 * 2 * (1 - var(--percent)));
+    stroke-dasharray: calc(var(--MATH-PI) * 45 * 2);
+    transition: all 0.8s;
+    transition-timing-function: cubic-bezier(.64, .51, .16, .86);
+}
+
+.circle-block>.tl-name,
+.circle-block>.tl-exp {
+    position: absolute;
+    transform: translate(240%, 250%);
+}
+
+.circle-block>.tl-name {
+    font-size: var(--font-size);
+    transform: translate(140%, 140%);
+}
+
+.circle-block>.tl-exp {
+    font-size: calc(var(--font-size) - 0.1rem);
+}

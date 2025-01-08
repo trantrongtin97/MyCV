@@ -5,40 +5,45 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserGraduate } from "@fortawesome/free-solid-svg-icons";
 import Title from "../../components/Title";
 import TimeLine from "../../components/TimeLine";
+import CircleProcess from "../../components/CircleProcess";
+import ResponsiveTable from "../../components/ResponsiveTable";
 
 const cx = classNames.bind(styles);
 
 const Education = () => {
+
+    const tlDatas = [{
+        id: 1,
+        header : `APTECH`,
+        address : `Ho Chi Minh, Viet Nam`,
+        time: `2018 - 2020`
+    }];
+
+    const ciData = {
+        id: 1,
+        content : `GPA`,
+        score : 8.6
+    }
+
+    const tables = [{
+        id : 1,
+        name : `English`,
+        value : `Intermediate`
+    }];
+
     return (
         <Fragment>
             <div className={cx('edu-content')}>
                 <Title name="Education" icon={<FontAwesomeIcon icon={faUserGraduate} />} />
                 <div className={cx('line1')}>
-                    <TimeLine />
-                    <div className={cx('circle-block')}>
-                        <svg>
-                            <circle cx="50" cy="50" r="45"></circle>
-                            <circle className={cx('cbar')} cx="50" cy="50" r="45" style={{ "--percent": "0.86" }}>
-                            </circle>
-                            
-                        </svg>
-                        <span className={cx('tl-name')}>GPA</span>
-                        <span className={cx('tl-exp')}>8.6</span>
+                    <TimeLine datas={tlDatas}/>
+                    <div className={cx('circle-area')}>
+                        <CircleProcess data={ciData}/>
                     </div>
-
                 </div>
             </div>
             <div>
-                <ul className={cx('responsive-table')}>
-                    <li className={cx('table-header')}>
-                        <div className={cx('col col-1')}>Language</div>
-                        <div className={cx('col col-2 col-temp')}>Level</div>
-                    </li>
-                    <li className={cx('table-row')}>
-                        <div className={cx('col col-1')} data-label="English"><span className={cx('col-temp')}>English</span></div>
-                        <div className={cx('col col-2')} data-label="Level">Intermediate</div>
-                    </li>
-                </ul>
+                <ResponsiveTable col1="Language" col2="Level" datas={tables}/>
             </div>
         </Fragment>
 

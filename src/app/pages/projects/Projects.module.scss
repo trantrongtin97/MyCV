@@ -1,0 +1,92 @@
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.proj-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.carousel, .navigation {
+    flex: initial;
+    display: block;
+}
+            
+.carousel {
+    overflow: hidden;
+    width: 800px;
+    height: 450px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+            
+.p-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+            
+.p-wrapper-0 {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); 
+}
+            
+.p-wrapper-1 {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); 
+}
+
+.p-wrapper-2  {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%); 
+}
+
+.p-wrapper-3  {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%); 
+}
+            
+.panel {
+    overflow: auto;
+    position: relative;
+    width: inherit;
+    height: inherit;
+    
+}
+        
+.navigation {
+    margin-left: 20px;
+}
+
+.label {
+    display: block;
+    cursor: pointer;
+    margin: 8px 0;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 4px;
+    color: var(--text-color);
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+            
+.label:hover {
+    color: var(--text-color);
+    background-color: var(--primary-hover);
+}
+            
+.label_check{
+     cursor: default;
+     color: #fff;
+     background-color: var(--primary);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
