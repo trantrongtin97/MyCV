@@ -26,17 +26,22 @@ $fontSize : 1rem;
         font-size: $fontSize;
         text-transform: uppercase;
         letter-spacing: 0.03em;
+        animation: move 0.5s forwards;
+        opacity: 0;
     }
 
     .table-row {
-        background-color: #a7a3a33b;
+        background-color: var(--gray);
         box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
         align-items: center;
-
-        &:hover {
-            transform: scale(1.04);
+        animation: move 0.5s forwards;
+        transition: 0.3s;
+        opacity: 0;
+        &:hover{
+            background-color:  var(--gray-hover);
         }
     }
+
     .col{
         padding-right: 8px;
     }
@@ -66,6 +71,18 @@ $fontSize : 1rem;
     
     .tech-icon + .tech-icon{
         margin-right: 2px;
+    }
+
+    @keyframes move {
+        from {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+    
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
 
     @media all and (max-width: 767px) {

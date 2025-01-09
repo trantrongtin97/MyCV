@@ -30,7 +30,7 @@ const Sidebar = () => {
                     <ul>
                         <li><a href=""><FontAwesomeIcon className={cx('i-primary')} icon={faLinkedin} /></a></li>
                         <li><a href=""><FontAwesomeIcon className={cx('i-primary')}  icon={faFacebookF} /></a></li>
-                        <li><a href=""><FontAwesomeIcon className={cx('i-primary')}  icon={faGithub} /></a></li>
+                        <li><a href="https://github.com/trantrongtin97"><FontAwesomeIcon className={cx('i-primary')}  icon={faGithub} /></a></li>
                         <li><a href=""><FontAwesomeIcon className={cx('i-primary')}  icon={faInstagram} /></a></li>
                     </ul>
                 </div>

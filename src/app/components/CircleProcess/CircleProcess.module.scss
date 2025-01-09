@@ -1,5 +1,6 @@
-.circle-block{
+.circle-block {
     display: flex;
+    position: relative;
 }
 
 .circle-block>svg {
@@ -7,9 +8,9 @@
 }
 
 .circle-block>svg>circle {
-    position: absolute;
     stroke-width: 1px;
     stroke: #cdcdcd;
+
 }
 
 .circle-block>svg>circle.cbar {
@@ -25,14 +26,18 @@
 .circle-block>.tl-name,
 .circle-block>.tl-exp {
     position: absolute;
-    transform: translate(240%, 250%);
+
 }
 
 .circle-block>.tl-name {
     font-size: var(--font-size);
-    transform: translate(140%, 140%);
+    top: 20%;
+    left: 12%;
+    ;
 }
 
 .circle-block>.tl-exp {
     font-size: calc(var(--font-size) - 0.1rem);
+    top: 30%;
+    left: 14%;
 }

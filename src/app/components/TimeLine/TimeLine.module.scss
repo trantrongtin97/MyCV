@@ -1,12 +1,11 @@
-
-.wrapper{
+.wrapper {
     display: flex;
     flex-direction: column;
 }
 
 .detail {
     padding: 0.5rem;
-    margin-left: 1.5rem; 
+    margin-left: 1.5rem;
     user-select: none;
     padding-left: calc(1.5rem + 10px);
 }
@@ -14,6 +13,8 @@
 .timeline-block {
     position: relative;
     padding-left: 30px;
+    animation: move 0.5s forwards;
+    opacity: 0;
 }
 
 .timeline-block:not(:last-of-type) {
@@ -24,13 +25,15 @@
     font-size: var(--font-size);
     margin: 5px 0;
     transition: all 0.3s;
-    &:hover{
+
+    &:hover {
         color: var(--primary-hover);
     }
 }
 
 .timeline-block p {
-    font-size: calc(var(--font-size) - 0.1rem);;
+    font-size: calc(var(--font-size) - 0.1rem);
+    ;
     margin: 5px 0;
 }
 
@@ -72,5 +75,17 @@
 
     100% {
         box-shadow: 0 0 0 6px rgba(51, 52, 57, 0);
+    }
+}
+
+@keyframes move {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

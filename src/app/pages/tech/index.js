@@ -261,7 +261,7 @@ const TechnologyAndSkills = () => {
             }]
         }
     ];
-
+    
     return (
         <div className={cx('content')}>
             <Title name="Technology And Skills" icon={<FontAwesomeIcon icon={faLaptopCode} />} />

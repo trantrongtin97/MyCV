@@ -8,6 +8,7 @@ $icon-size : 1.5rem;
 
 .detail-section {
     transition: all 0.3s;
+    animation: welcome 1s forwards;
     &:hover{
         .title-icon  {
             transform: scale(1.5);
@@ -48,4 +49,14 @@ $icon-size : 1.5rem;
     line-height: $icon-size - 0.5;
     font-size: $icon-size - 0.5;
     text-align: center;
+}
+
+@keyframes welcome {
+    from{
+        transform: scale(1.5);
+    }
+
+    to{
+        transform: scale(1);
+    }
 }

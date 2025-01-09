@@ -21,6 +21,8 @@
     overflow: hidden;
     background-color: white;
     font-weight: calc(var(--font-weigth) - 100);
+    animation: move 0.5s forwards;
+    opacity: 0;
     &:hover {
         font-weight: var(--font-weigth);
     }
@@ -35,6 +37,7 @@
     top: 0;
     left: 0;
     background: linear-gradient(to right, var(--c1) var(--stop), var(--c2) var(--stop));
+    animation: move 2s forwards;
 }
 
 .pfs-ol h3 {
@@ -57,6 +60,18 @@
     border-radius: 50%;
     background-color: var(--c1);
     color: white;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 @media (min-width: 40em) {

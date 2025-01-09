@@ -31,6 +31,9 @@
 
 .pr-list ul li {
     margin-bottom: 8px;
+    &:hover {
+        color: var(--primary);
+    }
 }
 
 .pr-list ul li i {
@@ -55,7 +58,7 @@
 }
 
 .social-icons-head ul li a:hover {
-    color: #000;
+    color:var(--primary);
     transform: scale(1.2) translateY(-5px);
 }
 

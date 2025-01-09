@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar, faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faPhone, faLocationDot, faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faFacebookF, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import Title from '../../components/Title';
 
 const cx = classNames.bind(styles);
 
@@ -13,13 +14,11 @@ const Profile = () => {
     return (
         <Fragment>
             <div className={cx('sec-title')}>
-                <div className={cx('pg-title')}>
-                    <FontAwesomeIcon icon={faCircleUser} />
-                    My Profile</div>
+                <Title name="My Profile" icon={<FontAwesomeIcon icon={faCircleUser} />} />
             </div>
             <div className={cx('page-content')}>
                 <div className={cx('user-img')}><img src={images.avatar} /></div>
-                <div className={cx('user-profile flex-1')}>
+                <div className={cx('user-profile','flex-1')}>
                     <div className={cx('user-profile')}>
                         <div className={cx('pro-details')}>
                             <div className={cx('name')}>Tran Trong Tin</div>
@@ -42,7 +41,7 @@ const Profile = () => {
                             <ul>
                                 <li><a href=""><FontAwesomeIcon icon={faLinkedin} /></a>
                                     <a href=""><FontAwesomeIcon icon={faFacebookF} /></a>
-                                    <a href=""><FontAwesomeIcon icon={faGithub} /></a>
+                                    <a href="https://github.com/trantrongtin97"><FontAwesomeIcon icon={faGithub} /></a>
                                     <a href=""><FontAwesomeIcon icon={faInstagram} /></a></li>
                             </ul>
                         </div>

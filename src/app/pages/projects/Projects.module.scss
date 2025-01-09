@@ -1,24 +1,26 @@
 .content{
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .proj-container{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
     height: 100%;
+    flex: 1;
 }
 
 .carousel, .navigation {
-    flex: initial;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
             
 .carousel {
     overflow: hidden;
     width: 800px;
-    height: 450px;
+    flex: 1;
     border-radius: 4px;
     background-color: #fff;
 }
@@ -74,6 +76,7 @@
     color: var(--text-color);
     background-color: #fff;
     transition: all 0.3s ease;
+    box-shadow: 0px 0px 0px 0.5px rgba(0,0,0,0.3); 
 }
             
 .label:hover {
@@ -81,10 +84,11 @@
     background-color: var(--primary-hover);
 }
             
-.label_check{
+.label-check{
      cursor: default;
      color: #fff;
      background-color: var(--primary);
+     border-radius: 37%;
 }
 
 ::-webkit-scrollbar {

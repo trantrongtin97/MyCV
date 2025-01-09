@@ -2,6 +2,7 @@ import styles from './ProjectTable.module.scss';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeBranch, faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import { Fragment } from 'react';
 
 const cx = classNames.bind(styles);
 
@@ -76,9 +77,9 @@ const ProjectTable = ({ data }) => {
                             className={cx('col-temp')}>Used Technologies</span></div>
                         <div className={cx('col','col-1')} data-label="">
                             <div className={cx('col-text-content')}>
-                                <p>Back End: <i>{data.tech.be}</i></p>
-                                <p>Front End: <i>{data.tech.fe}</i></p>
-                                <p>Databases: <i>{data.tech.db}</i></p>
+                                {(data.tech.be)?(<p>Back End: <i>{data.tech.be}</i></p>):(<Fragment/>)}
+                                {(data.tech.fe)?(<p>Front End: <i>{data.tech.fe}</i></p>):(<Fragment/>)}
+                                {(data.tech.db)?(<p>Databases: <i>{data.tech.db}</i></p>):(<Fragment/>)}
                             </div>
                         </div>
                     </li>

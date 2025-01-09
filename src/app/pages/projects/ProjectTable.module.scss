@@ -29,10 +29,13 @@ $fontSize : 1rem;
     }
 
     .table-row {
-        background-color: #a7a3a33b;
+        background-color: var(--gray);
         box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
         align-items: center;
         padding: 10px;
+        &:hover{
+            background-color: var(--gray-hover);
+        }
     }
     .col{
         padding-right: 10px;

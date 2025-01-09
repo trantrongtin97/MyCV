@@ -15,7 +15,7 @@ const ResponsiveTable = ({ datas, col1, col2 }) => {
                     {
                         datas.map((d, index1) => {
                             return (
-                                <li key={index1} className={cx('table-row')}>
+                                <li key={d.id} style={{"animationDelay":(d.id*0.1)+"s"}} className={cx('table-row')}>
                                     {
                                         (d.icons && d.icons.length > 0) ? (
                                             <div className={cx('col', 'col-1')} data-label="">
